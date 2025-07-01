@@ -233,26 +233,23 @@
     </footer>
 
     <script>
-        // Initialize EmailJS with your user ID
         (function () {
-            emailjs.init("Ysii-FxNn4UWKZzUJ"); // Replace with your EmailJS public key
+            emailjs.init("Ysii-FxNn4UWKZzUJ");
         })();
 
         document.getElementById('button').addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default form submission
+            e.preventDefault();
 
-            // Collect form data
             const email = document.getElementById('email').value;
             const name = document.getElementById('name').value;
             const message = document.getElementById('message').value;
 
-            // Send email via EmailJS
             emailjs.send("service_j0oeqtv", "template_347h0qg", {
                 from_name: name,
                 from_email: email,
                 message: message
             }).then(function (response) {
-                alert("Message sent successfully!");
+                alert("Successfully sent !");
                 document.getElementById("contact-form").reset();
             }, function (error) {
                 alert("Failed to send message. Please try again.");
