@@ -33,7 +33,10 @@ h5 {
     font-weight: 100;
     font-size: medium;
 }
-
+.container h5, .row h5{
+    font-weight: 100;
+    font-size: medium;
+}
 #portfolio .card {
     border: none;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
