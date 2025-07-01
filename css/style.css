@@ -33,8 +33,12 @@ h2 {
 h5 {
     color: #6c757d;
     margin-bottom: 2rem;
+    
 }
-
+.container h5{
+    font-weight: 100;
+    font-size: medium;
+}
 /* Portfolio Section */
 #portfolio .card {
     border: none;
