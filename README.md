@@ -1,3 +1,3 @@
 # my-portfolio
 
-# watch and hire me ":)"
+# watch and hire me :)

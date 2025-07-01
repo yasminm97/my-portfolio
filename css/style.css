@@ -30,10 +30,8 @@ h2 {
 h5 {
     color: #6c757d;
     margin-bottom: 2rem;
-    font-weight: 100;
-    font-size: medium;
 }
-.container h5, .row h5{
+.container h5{
     font-weight: 100;
     font-size: medium;
 }
@@ -81,6 +79,10 @@ h5 {
     border: none;
 }
 #hoppies .card h4{
+    font-size: medium;
+    font-weight: 100;
+}
+#hoppies .card h5{
     font-size: medium;
     font-weight: 100;
 }
