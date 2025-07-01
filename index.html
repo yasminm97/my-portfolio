@@ -232,13 +232,40 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        (function () {
+            emailjs.init("Ysii-FxNn4UWKZzUJ"); // Replace with your EmailJS public key
+        })();
 
-    <script src="script.js">
+        document.getElementById('button').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            // Send email via EmailJS
+            emailjs.send("service_j0oeqtv", "template_347h0qg", {
+                from_name: name,
+                from_email: email,
+                message: message
+            }).then(function (response) {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form").reset();
+            }, function (error) {
+                alert("Failed to send message. Please try again.");
+                console.error("Error:", error);
+            });
+        });
+        const button = document.getElementById('button');
+        button.disabled = true;
+        button.textContent = "Sending...";
+        // after sending
+        button.disabled = false;
+        button.textContent = "Send Now";
     </script>
-
 
 </body>
 
