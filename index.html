@@ -220,7 +220,7 @@
                     </div>
                 </form>
                 <div class="mb-3">
-                    <button type="submit" class="form-control btn p-3" id="button" name="button">Send Now</button>
+                    <button type="submit" class="form-control btn p-3" id="emailbutton" name="button">Send Now</button>
                 </div>
 
             </div>
@@ -243,6 +243,9 @@
             const email = document.getElementById('email').value;
             const name = document.getElementById('name').value;
             const message = document.getElementById('message').value;
+            const button = document.getElementById('emailbutton');
+            button.disabled = true;
+            button.textContent = "Sending...";
 
             emailjs.send("service_j0oeqtv", "template_347h0qg", {
                 from_name: name,
@@ -256,10 +259,7 @@
                 console.error("Error:", error);
             });
         });
-        const button = document.getElementById('button');
-        button.disabled = true;
-        button.textContent = "Sending...";
-        // after sending
+
         button.disabled = false;
         button.textContent = "Send Now";
     </script>
